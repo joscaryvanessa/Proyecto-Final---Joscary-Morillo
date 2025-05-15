@@ -1,0 +1,54 @@
+.card-custom {
+  border: 3px solid transparent;
+  border-image: linear-gradient(45deg, #f39c12, #8e44ad) 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 12px rgba(243, 156, 18, 0.7), 0 0 20px rgba(142, 68, 173, 0.5);
+  border-color: #f39c12;
+}
+
+.card-custom .card-img-top {
+  border-bottom: 1px solid #eee;
+  object-fit: cover;
+}
+
+.bg-products {
+  background-image: url("/src/assets/background1.jpg");
+}
+
+.card-custom {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.add-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.btn-add {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}
+
+.add-count {
+  margin-left: 0.75rem;
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}

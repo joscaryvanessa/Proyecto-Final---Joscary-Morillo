@@ -1,0 +1,28 @@
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background-color: #221110;
+  margin-left: -269px;
+}
+
+.navbar-brand img {
+  border-radius: 30% !important;
+}
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+.navbar-logo {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4a3632;
+  border-bottom: 2px solid #4a3632;
+}

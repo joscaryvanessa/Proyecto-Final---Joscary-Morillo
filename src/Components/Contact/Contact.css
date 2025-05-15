@@ -1,0 +1,17 @@
+.contact-bg {
+  background-image: url("/src/assets/imagen4.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.contact-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+.contact-bg > * {
+  position: relative;
+}
