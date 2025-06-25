@@ -51,6 +51,31 @@ body,
   color: #fff !important;
 }
 
+/* En móvil, el subrayado solo debajo del texto */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link.active {
+    border-bottom: none !important;
+    display: inline-block !important;
+    width: fit-content !important;
+    position: relative !important;
+  }
+  
+  .navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    height: 2px;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #fff !important;
+  }
+}
+
 /* Logo móvil - solo visible en pantallas pequeñas */
 .navbar-brand-mobile {
   display: block;
