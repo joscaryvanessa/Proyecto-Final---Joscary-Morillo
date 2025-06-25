@@ -112,6 +112,7 @@
     min-width: 0;
     max-width: 100%;
     margin-bottom: 1rem;
+    font-size: 0.8rem;
   }
   .btn-producto {
     font-size: 1rem;
@@ -121,6 +122,18 @@
     width: 100% !important;
     min-width: 0;
     margin-left: 0 !important;
+  }
+  /* Cards más pequeñas en móvil */
+  .card-custom .product-title {
+    font-size: 1rem !important;
+  }
+  .card-custom .product-price {
+    font-size: 0.9rem !important;
+  }
+  .card-custom .btn-producto {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.4rem !important;
+    min-width: 40px !important;
   }
 }
 

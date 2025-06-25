@@ -218,7 +218,7 @@ export default function Products() {
                   style={{ width: '300px', marginLeft: 0, display: 'block' }}
                 />
               </div>
-              <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-4">
+              <Row xs={2} sm={2} md={3} lg={4} xl={5} className="g-4">
                 {paginatedProducts.map(p => {
                   const count = countInCart(p.id);
                   const isMock = typeof p.id === 'string' && p.description !== undefined;

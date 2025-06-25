@@ -82,12 +82,19 @@
     font-size: 0.95rem;
     padding: 0.25rem 0;
     text-align: center;
+    margin: 1rem 0 !important;
   }
   .bordered-image, .bordered-item-right {
     max-width: 90vw;
     height: auto;
     margin: 0 auto 1rem auto;
     display: block;
+  }
+  .order-1 {
+    order: 1 !important;
+  }
+  .order-2 {
+    order: 2 !important;
   }
 }
 

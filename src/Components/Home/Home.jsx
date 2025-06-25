@@ -29,55 +29,27 @@ function Home({ items }) {
           className="align-items-center"
           style={{ backgroundColor: item.backgroundColor, color: 'white' }}
         >
-          {item.imageFirst ? (
-            <>
-              <Col md={6} className="d-flex justify-content-center">
-                <img
-                  src={item.imgSrc}
-                  alt={item.alt}
-                  className="img-fluid grid-image-hover bordered-image"
-                  width={item.width}
-                  height={item.height}
-                  style={{ maxHeight: item.height }}
-                />
-              </Col>
-              <Col md={6}>
-                <p
-                  className="mb-0 text-hover-animate texto-estilizado"
-                  style={{
-                    marginRight: idx !== 1 ? '40%' : undefined,
-                    marginLeft: idx === 1 ? '30%' : undefined
-                  }}
-                >
-                  {item.text}
-                </p>
-              </Col>
-            </>
-          ) : (
-            <>
-              <Col md={6}>
-                <p
-                  className="mb-0 text-hover-animate texto-estilizado"
-                  style={{
-                    marginRight: idx !== 1 ? '40%' : undefined,
-                    marginLeft: idx === 1 ? '30%' : undefined
-                  }}
-                >
-                  {item.text}
-                </p>
-              </Col>
-              <Col md={6}>
-                <img
-                  src={item.imgSrc}
-                  alt={item.alt}
-                  className="img-fluid grid-image-hover bordered-image bordered-item-right"
-                  width={item.width}
-                  height={item.height}
-                  style={{ maxHeight: item.height }}
-                />
-              </Col>
-            </>
-          )}
+          <Col md={6} className={`d-flex justify-content-center ${item.imageFirst ? 'order-md-1' : 'order-md-2'} order-1`}>
+            <img
+              src={item.imgSrc}
+              alt={item.alt}
+              className="img-fluid grid-image-hover bordered-image"
+              width={item.width}
+              height={item.height}
+              style={{ maxHeight: item.height }}
+            />
+          </Col>
+          <Col md={6} className={`${item.imageFirst ? 'order-md-2' : 'order-md-1'} order-2`}>
+            <p
+              className="mb-0 text-hover-animate texto-estilizado"
+              style={{
+                marginRight: idx !== 1 ? '40%' : undefined,
+                marginLeft: idx === 1 ? '30%' : undefined
+              }}
+            >
+              {item.text}
+            </p>
+          </Col>
         </Row>
       ))}
     </>
