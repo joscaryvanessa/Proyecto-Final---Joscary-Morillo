@@ -40,6 +40,17 @@ body,
   border-bottom: 2px solid #4a3632;
 }
 
+/* Subrayado para enlaces activos */
+.navbar-nav .nav-link.active {
+  border-bottom: 2px solid #fff !important;
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link.active:hover {
+  border-bottom: 2px solid #fff !important;
+  color: #fff !important;
+}
+
 /* Logo móvil - solo visible en pantallas pequeñas */
 .navbar-brand-mobile {
   display: block;

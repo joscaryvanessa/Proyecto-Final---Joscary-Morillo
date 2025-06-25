@@ -40,17 +40,17 @@ export default function AppNavbar() {
         
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="left-nav">
-            <Nav.Link as={NavLink} to="/" className="text-white" onClick={handleNavClick}>
+            <Nav.Link as={NavLink} to="/" className="text-white" onClick={handleNavClick} end>
               Inicio
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/productos" className="text-white" onClick={handleNavClick}>
+            <Nav.Link as={NavLink} to="/productos" className="text-white" onClick={handleNavClick} end>
               Productos
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/contacto" className="text-white" onClick={handleNavClick}>
+            <Nav.Link as={NavLink} to="/contacto" className="text-white" onClick={handleNavClick} end>
               <BsEnvelope style={{ marginRight: 4, marginBottom: 2 }} />
               Contacto
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/faq" className="text-white" onClick={handleNavClick}>
+            <Nav.Link as={NavLink} to="/faq" className="text-white" onClick={handleNavClick} end>
               Preguntas Frecuentes
             </Nav.Link>
           </Nav>
@@ -66,7 +66,7 @@ export default function AppNavbar() {
           
           <Nav className="right-nav">
             {!isLoggedIn ? (
-              <Nav.Link as={NavLink} to="/login" className="text-white" onClick={handleNavClick}>
+              <Nav.Link as={NavLink} to="/login" className="text-white" onClick={handleNavClick} end>
                 <BsBoxArrowInRight style={{ marginRight: 4, marginBottom: 2 }} />
                 Iniciar Sesion
               </Nav.Link>
@@ -81,6 +81,7 @@ export default function AppNavbar() {
               to="/carrito"
               className="text-white position-relative"
               onClick={handleNavClick}
+              end
             >
               <i className="bi bi-cart-fill"></i>
               {cart.length > 0 && (
