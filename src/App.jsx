@@ -12,6 +12,9 @@ import PrivacyPolicy from './Components/Footer/Policy';
 import TermsAndConditions from './Components/Footer/Terms';
 import CambiosDevoluciones from './Components/Footer/Changes';
 import PrivateRoute from './Components/Login/PrivateRoute';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from 'react-helmet';
 
 function App() {
   const Imagenes = [
@@ -46,6 +49,10 @@ function App() {
 
   return (
     <div className="d-flex flex-column min-vh-100">
+      <Helmet>
+        <title>Amargo & Aromático - Cafetería y Productos Gourmet</title>
+        <meta name="description" content="Descubre los mejores cafés y productos gourmet en Amargo & Aromático. Compra online, consulta preguntas frecuentes y contacta con nosotros." />
+      </Helmet>
       <Navbar>
         <Nav className="mx-auto" textColor="white">
           <Nav.Link href="/">Inicio</Nav.Link>
@@ -72,9 +79,7 @@ function App() {
           <Route path="/terminos-condiciones"   element={<TermsAndConditions />} />
           <Route path="/cambios-devoluciones"   element={<CambiosDevoluciones />} />
 
-          <Route element={<PrivateRoute />}>
-            <Route path="/carrito" element={<Carrito />} />
-          </Route>
+          <Route path="/carrito" element={<Carrito />} />
           <Route path="*" element={<Navigate to="/" replace />} />
 
         </Routes>
@@ -88,6 +93,7 @@ function App() {
         whatsappNumber="+5491112345678"
         emailAddress="amargo-aromatico@gmail.com"
       />
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }

@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Badge } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './Navbar.css';
 import { CartContext } from '../Carrito/CartContext';
 import { useAuth } from '../../Components/Login/AuthContext';
+import { BsHeart, BsBoxArrowInRight, BsBoxArrowRight, BsEnvelope } from 'react-icons/bs';
 
 
 export default function AppNavbar() {
@@ -28,6 +29,7 @@ export default function AppNavbar() {
             Productos
           </Nav.Link>
           <Nav.Link as={NavLink} to="/contacto" className="text-white">
+            <BsEnvelope style={{ marginRight: 4, marginBottom: 2 }} />
             Contacto
           </Nav.Link>
           <Nav.Link as={NavLink} to="/faq" className="text-white">
@@ -47,10 +49,12 @@ export default function AppNavbar() {
         <Nav className="right-nav">
           {!isLoggedIn ? (
             <Nav.Link as={NavLink} to="/login" className="text-white">
+              <BsBoxArrowInRight style={{ marginRight: 4, marginBottom: 2 }} />
               Iniciar Sesion
             </Nav.Link>
           ) : (
             <Nav.Link onClick={handleLogout} className="text-white">
+              <BsBoxArrowRight style={{ marginRight: 4, marginBottom: 2 }} />
               Cerrar Sesión
             </Nav.Link>
           )}

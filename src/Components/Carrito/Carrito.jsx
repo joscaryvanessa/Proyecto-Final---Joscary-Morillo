@@ -13,17 +13,13 @@ export default function Carrito() {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   const handleFinalize = async () => {
-    if (!isLoggedIn) {
-      navigate('/login', { state: { from: '/carrito' } });
-    } else {
-      await Swal.fire({
-        title: '¡Compra finalizada!',
-        text: `Gracias por tu compra. Has adquirido ${cart.length} artículo(s). Total: $${total.toFixed(2)}`,
-        icon: 'success',
-        confirmButtonText: 'Aceptar'
-      });
-      clearCart();
-    }
+    await Swal.fire({
+      title: '¡Compra exitosa!',
+      text: `Gracias por tu compra. Has adquirido ${cart.length} artículo(s). Total: $${total.toFixed(2)}`,
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    });
+    clearCart();
   };
 
   return (

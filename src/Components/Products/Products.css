@@ -3,12 +3,16 @@
   border-image: linear-gradient(45deg, #f39c12, #8e44ad) 1;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
     box-shadow 0.3s ease;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 520px;
+  padding: 0;
 }
 
 .card-custom:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 12px rgba(243, 156, 18, 0.7), 0 0 20px rgba(142, 68, 173, 0.5);
-  border-color: #f39c12;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-custom .card-img-top {
@@ -18,16 +22,47 @@
 
 .bg-products {
   background-image: url("/src/assets/background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.card-custom {
-  border-radius: 0.75rem;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.card-custom .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }
-.card-custom:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+.card-custom .product-title {
+  font-size: 1.2rem;
+}
+
+.card-custom .product-price {
+  font-size: 1.1rem;
+}
+
+.card-custom .btn-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: auto;
+  width: 100%;
+}
+
+.card-custom .btn,
+.card-custom button {
+  font-size: 1rem;
+  padding: 0.5rem 0px;
+  flex: 1 1 0;
+  margin-left: -4px;
 }
 
 .add-container {
@@ -51,4 +86,125 @@
   border-radius: 0.5rem;
   font-size: 0.85rem;
   font-weight: 500;
+}
+
+.btn-producto {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  min-width: 50px;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  flex: 1 1 0;
+  text-align: center;
+}
+
+/* Centrar el grupo de botones en la card */
+.card-custom .d-flex.flex-row {
+  justify-content: center !important;
+}
+
+/* Responsive grid for products */
+@media (max-width: 575.98px) {
+  .bg-products .row {
+    --bs-gutter-x: 0.5rem;
+  }
+  .card-custom {
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .btn-producto {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .form-control {
+    width: 100% !important;
+    min-width: 0;
+    margin-left: 0 !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .bg-products .row {
+    --bs-gutter-x: 1rem;
+  }
+  .card-custom {
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .form-control {
+    width: 70% !important;
+    min-width: 200px;
+    margin-left: 0 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .bg-products .row {
+    --bs-gutter-x: 1.5rem;
+  }
+  .card-custom {
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .form-control {
+    width: 300px !important;
+    min-width: 200px;
+    margin-left: 0 !important;
+  }
+}
+
+/* Botones de paginación marrón */
+.pagination-brown .page-link {
+  background-color: #8d5524;
+  color: #fff;
+  border: 1px solid #8d5524;
+  border-radius: 0.25rem;
+  margin: 0 2px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.pagination-brown .page-link:hover,
+.pagination-brown .page-link:focus {
+  background-color: #a4753b;
+  color: #fff;
+  outline: none;
+}
+.pagination-brown .active .page-link,
+.pagination-brown .page-item.active .page-link {
+  background-color: #a4753b;
+  color: #fff;
+  border-color: #a4753b;
+}
+
+.btn-azul {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+  border: none;
+}
+.btn-azul:hover, .btn-azul:focus {
+  background-color: #0b5ed7 !important;
+  color: #fff !important;
+}
+
+.btn-verde {
+  background-color: #198754 !important;
+  color: #fff !important;
+  border: none;
+}
+.btn-verde:hover, .btn-verde:focus {
+  background-color: #146c43 !important;
+  color: #fff !important;
+}
+
+.btn-rojo {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+  border: none;
+}
+.btn-rojo:hover, .btn-rojo:focus {
+  background-color: #b52a37 !important;
+  color: #fff !important;
 }

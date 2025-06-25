@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Accordion, Container } from 'react-bootstrap';
 import './Questions.css';
+import { Helmet } from 'react-helmet';
 
 const defaultFaqs = [
   {
@@ -32,19 +33,25 @@ const defaultFaqs = [
 
 export default function Questions({ faqs = defaultFaqs }) {
   return (
-    <div className="faq-background">
-      <Container className="faq-container">
-        <h2 className="text-center mb-4">Preguntas Frecuentes</h2>
-        <Accordion>
-          {faqs.map((item, index) => (
-            <Accordion.Item eventKey={`${index}`} key={index}>
-              <Accordion.Header>{item.question}</Accordion.Header>
-              <Accordion.Body>{item.answer}</Accordion.Body>
-            </Accordion.Item>
-          ))}
-        </Accordion>
-      </Container>
-    </div>
+    <>
+      <Helmet>
+        <title>Preguntas Frecuentes | Amargo & Aromático</title>
+        <meta name="description" content="Resuelve tus dudas sobre horarios, envíos, métodos de pago y más en Amargo & Aromático." />
+      </Helmet>
+      <div className="faq-background">
+        <Container className="faq-container">
+          <h2 className="text-center mb-4">Preguntas Frecuentes</h2>
+          <Accordion>
+            {faqs.map((item, index) => (
+              <Accordion.Item eventKey={`${index}`} key={index}>
+                <Accordion.Header>{item.question}</Accordion.Header>
+                <Accordion.Body>{item.answer}</Accordion.Body>
+              </Accordion.Item>
+            ))}
+          </Accordion>
+        </Container>
+      </div>
+    </>
   );
 }
 

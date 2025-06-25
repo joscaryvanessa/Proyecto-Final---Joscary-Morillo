@@ -15,3 +15,9 @@
 .contact-bg > * {
   position: relative;
 }
+
+.contact-bg .form-control {
+  width: 100% !important;
+  min-width: 0;
+  box-sizing: border-box;
+}

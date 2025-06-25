@@ -2,10 +2,15 @@ import PropTypes from 'prop-types';
 import banner from '../../assets/banner.jpg';
 import './Home.css';
 import { Row, Col } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 function Home({ items }) {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Inicio | Amargo & Aromático</title>
+        <meta name="description" content="Bienvenido a Amargo & Aromático. Descubre nuestra cafetería y productos gourmet." />
+      </Helmet>
       <div>
         <img
           src={banner}
@@ -75,7 +80,7 @@ function Home({ items }) {
           )}
         </Row>
       ))}
-    </div>
+    </>
   );
 }
 

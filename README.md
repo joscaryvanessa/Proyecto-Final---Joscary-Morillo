@@ -1,12 +1,23 @@
-# React + Vite
+# Amargo & Aromático - E-commerce React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una tienda online de café y productos gourmet, desarrollada con React, Vite y MockAPI para la gestión de productos.
 
-Currently, two official plugins are available:
+## 🛠️ Funcionalidades principales
+- Catálogo de productos desde API pública y MockAPI
+- CRUD de productos (solo administradores autenticados)
+- Carrito de compras global
+- Búsqueda, paginación y favoritos
+- Notificaciones (React Toastify, SweetAlert)
+- Accesibilidad y SEO (React Helmet, ARIA)
+- UI responsiva y moderna
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👤 Acceso administrador
+- Usuario: `admin`
+- Contraseña: `1234`
 
-## Expanding the ESLint configuration
+## 📦 Stack principal
+- React, Vite, React Bootstrap
+- MockAPI (https://mockapi.io)
+- React Router, React Toastify, SweetAlert2, React Helmet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
