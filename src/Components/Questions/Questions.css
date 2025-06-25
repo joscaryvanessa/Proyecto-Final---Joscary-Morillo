@@ -1,7 +1,10 @@
 .faq-background {
-  background-image: url("/src/assets/imagen4.jpg");
+  background-image: url("/assets/imagen4.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   padding: 2rem 0;
   display: flex;

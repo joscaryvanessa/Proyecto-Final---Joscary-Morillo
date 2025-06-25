@@ -15,11 +15,14 @@ import PrivateRoute from './Components/Login/PrivateRoute';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from 'react-helmet';
+import imagen1 from './assets/imagen1.jpg';
+import imagen2 from './assets/imagen2.jpg';
+import imagen3 from './assets/imagen3.jpg';
 
 function App() {
   const Imagenes = [
     {
-      imgSrc: '/src/assets/imagen1.jpg',
+      imgSrc: imagen1,
       alt: 'Imagen 1',
       text: '“Amargo & Aromático” es la esencia de nuestra cafetería…',
       imageFirst: true,
@@ -28,7 +31,7 @@ function App() {
       backgroundColor: '#36160a'
     },
     {
-      imgSrc: '/src/assets/imagen2.jpg',
+      imgSrc: imagen2,
       alt: 'Imagen 2',
       text: 'Nuestro propósito es transformar el acto cotidiano de beber café…',
       imageFirst: false,
@@ -37,7 +40,7 @@ function App() {
       backgroundColor: '#4c2710'
     },
     {
-      imgSrc: '/src/assets/imagen3.jpg',
+      imgSrc: imagen3,
       alt: 'Imagen 3',
       text: 'Nuestro servicio de entrega lleva hasta tu puerta la frescura…',
       imageFirst: true,
